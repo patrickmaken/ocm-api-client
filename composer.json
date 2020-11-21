@@ -1,0 +1,21 @@
+{
+    "name": "patrickmaken/ocm-api-client",
+    "description": "Bibliothèque PHP cliente pour les opérations Orange Money",
+    "authors": [
+        {
+            "name": "Patrick Madeng",
+            "email": "patrickmaken@gmail.com",
+            "role": "IT Engineer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Patrickmaken\\OcmAPI\\": "src/"
+        }
+    }
+}
