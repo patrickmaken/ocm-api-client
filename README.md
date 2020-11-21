@@ -40,7 +40,7 @@ $payObject->subscriberMsisdn = '697452601';
 $payObject->amount = 10000;
 $payObject->description = 'Payment of train ticket';
 $payObject->orderId = 'TK201588962';
-$payObject->notifUrl = 'https://myappllication.org/callback_url';
+$payObject->notifUrl = 'https://myapplication.org/callback_url';
 
 // Perform a new payment
 $paymentResponse = OMClient::pay($payObject, $payToken);
@@ -74,15 +74,15 @@ object(Patrickmaken\OcmAPI\Models\PaymentResponse)#30 (14) {
   ["status"]=>
   string(7) "PENDING"
   ["notifUrl"]=>
-  string(39) "https://myappllication.org/callback_url"
+  string(39) "https://myapplication.org/callback_url"
   ["description"]=>
   string(23) "Payment of train ticket"
   ["channelUserMsisdn"]=>
-  string(9) "699848909"
+  string(9) "694221100"
 }
 ```
 
-### Get Payment Status
+### Get payment status
 
 ```php
 use Patrickmaken\OcmAPI\Client as OMClient;
@@ -130,11 +130,11 @@ object(Patrickmaken\OcmAPI\Models\PaymentResponse)#30 (14) {
   ["status"]=>
   string(7) "PENDING"
   ["notifUrl"]=>
-  string(39) "https://myappllication.org/callback_url"
+  string(39) "https://myapplication.org/callback_url"
   ["description"]=>
   string(23) "Payment of train ticket"
   ["channelUserMsisdn"]=>
-  string(9) "699848909"
+  string(9) "694221100"
 }
 ```
 

@@ -24,7 +24,7 @@ $payObject->subscriberMsisdn = '697452601';
 $payObject->amount = 10000;
 $payObject->description = 'Payment of train ticket';
 $payObject->orderId = 'TK201588962';
-$payObject->notifUrl = 'https://myappllication.org/callback_url';
+$payObject->notifUrl = 'https://myapplication.org/callback_url';
 
 // Perform a new payment
 $paymentResponse = OMClient::pay($payObject, $payToken);
