@@ -82,7 +82,7 @@ object(Patrickmaken\OcmAPI\Models\PaymentResponse)#30 (14) {
 }
 ```
 
-### Get SMS Status
+### Get Payment Status
 
 ```php
 use Patrickmaken\OcmAPI\Client as OMClient;
