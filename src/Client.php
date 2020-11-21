@@ -12,11 +12,11 @@ class Client
     protected const API_MP = 'mp';
 
     /**
-     * Initier une transaction Orange Money
+     * Init Orange Money Payment
      * 
      * @throws \Exception
      * @param string $api
-     * @return string PayToken à sauvegarder avant d'effectuer les autres opérations
+     * @return string PayToken To save befor performing others actions
      */
     public static function init(string $api = self::API_MP) 
     {
@@ -28,7 +28,7 @@ class Client
     }
 
     /**
-     * Effectuer une transaction Orange Money
+     * Perform payment action
      * 
      * @throws \Exception
      * @param \Patrickmaken\OcmAPI\Models\PayObject $payObject
@@ -46,7 +46,7 @@ class Client
     }
 
     /**
-     * Renvoi le statut d'un paiement
+     * Get Payment status
      * 
      * @throws \Exception
      * @param string $PayToken
@@ -63,6 +63,8 @@ class Client
     }
 
     /**
+     * Set Orange Money API parameters
+     * 
      * @param array $configs
      * @return void
      */
@@ -70,11 +72,10 @@ class Client
     {
         if (array_key_exists('env', $configs)) Core::setEnv($configs['env']);
         if (array_key_exists('client_id', $configs)) Core::setClientId($configs['client_id']);
-        if (array_key_exists('client_secret', $configs)) Core::setSecret($configs['client_secret']);
-        if (array_key_exists('access_token', $configs)) Core::setAccessToken($configs['access_token']);
+        if (array_key_exists('client_secret', $configs)) Core::setClientSecret($configs['client_secret']);
         if (array_key_exists('om_app_id', $configs)) Core::setOmAppId($configs['om_app_id']);
         if (array_key_exists('om_app_secret', $configs)) Core::setOmAppSecret($configs['om_app_secret']);
-        if (array_key_exists('pin', $configs)) Core::setOmAppSecret($configs['pin']);
+        if (array_key_exists('pin', $configs)) Core::setPin($configs['pin']);
         if (array_key_exists('channel_user_msisdn', $configs)) Core::setChannelUserMsisdn($configs['channel_user_msisdn']);
     }
 }

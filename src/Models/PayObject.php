@@ -5,35 +5,35 @@ namespace Patrickmaken\OcmAPI\Models;
 class PayObject {
 
     /**
-     * Numéro de téléphone du client au format 6xxxxxxxx
+     * Client phone number at format 6xxxxxxxx
      * 
-     * @var string
+     * @property string
      */
     public $subscriberMsisdn;
     
     /**
-     * Le montant de la transaction
+     * Transaction amount
      * 
-     * @var int
+     * @property int
      */
     public $amount;
     
     /**
-     * @var string
+     * @property string
      */
     public $description;
     
     /**
-     * Un identifiant du paiment
+     * Payment Identifier
      * 
-     * @var string
+     * @property string
      */
     public $orderId;
     
     /**
-     * L'URL de notification
+     * Notification URL
      *
-     * @var string
+     * @property string
      */
     public $notifUrl;
     
@@ -44,7 +44,7 @@ class PayObject {
     {
         return [
             'subscriberMsisdn' => $this->subscriberMsisdn,
-            'amount' => $this->amount,
+            'amount' => strval($this->amount),
             'description' => $this->description,
             'orderId' => $this->orderId,
             'notifUrl' => $this->notifUrl,

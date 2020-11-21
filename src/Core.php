@@ -16,7 +16,7 @@ class Core
     protected const URL_PAYEMENT_STATUS = '/omcoreapis/1.0.2/%s/paymentstatus/%s';
 
     /**
-     * @property $name string
+     * @property string
      */
     protected static $clientId;
 
@@ -114,6 +114,8 @@ class Core
         $json['pin'] = self::$pin;
         $json['payToken'] = $PayToken;
 
+        print_r($json);
+
         $client = self::makeClient(compact('headers', 'json'));
         $result = self::perform($client, $url, 'post', true, true);
 
@@ -196,7 +198,7 @@ class Core
     {
         $options = [
             'timeout'  => 20.0,
-            'verify' => dirname(__FILE__, 2) . '/cacert.pem',
+            'verify' => false,
         ];
         foreach ($params as $key => $value) $options[$key] = $value;
 
@@ -209,7 +211,7 @@ class Core
         self::$clientId = $value;
     }
 
-    public static function setSecret(string $value)
+    public static function setClientSecret(string $value)
     {
         self::$clientSecret = $value;
     }
