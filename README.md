@@ -15,7 +15,7 @@ composer require patrickmaken/ocm-api-client
 
 Before any operation, you must initialize the client by giving it your Orange Money API parameters: `client_id`, `client_secret`, `om_app_id`, `om_app_secret`, `pin` and `channel_user_msisdn`
 
-### Send SMS
+### Make payment
 
 ```php
 use Patrickmaken\OcmAPI\Client as OMClient;
